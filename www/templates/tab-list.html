@@ -1,0 +1,17 @@
+<ion-view view-title="задачи">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-remove-animate item-icon-right" ng-repeat="order in orders" type="item-text-wrap"
+                      href="#/tab/chats/{{chat.id}}">
+
+                <h2>{{order.name}}</h2>
+
+                <p>{{order.phone}}</p>
+                <span class="badge badge-assertive">{{order.time}}</span>
+                <ion-option-button class="button-assertive" ng-click="remove(chat)">Пометить выполненым
+                </ion-option-button>
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

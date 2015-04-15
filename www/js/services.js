@@ -1,13 +1,13 @@
 angular.module('starter.services', [])
 
-    .factory('Chats', function ($http, $q) {
+    .factory('Orders', function ($http, $q) {
 
         var orders = [];
         return {
             all: function(){
                 var dfd = $q.defer();
                 //$http.get("http://scw.by/data/data.json").then(function(response){
-                $http.get("./data/data.json").then(function(response){
+                $http.get("./data/anton.json").then(function(response){
                     orders = response.data;
                     console.log(orders);
                     dfd.resolve(orders);

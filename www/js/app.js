@@ -44,38 +44,38 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.info', {
+    url: '/info',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-info': {
+        templateUrl: 'templates/tab-info.html',
+        controller: 'InfoCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/list',
+  .state('tab.orders', {
+      url: '/orders',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-list.html',
-          controller: 'ListCtrl',
+        'tab-orders': {
+          templateUrl: 'templates/tab-orders.html',
+          controller: 'OrdersCtrl',
           resolve: {
-            allorders: function(Chats) {
-              return Chats.all(); }
+            allorders: function(Orders) {
+              return Orders.all(); }
           }
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.order-detail', {
+      url: '/orders/:orderId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ListCtrl',
+        'tab-orders': {
+          templateUrl: 'templates/order-detail.html',
+          controller: 'OrdersCtrl',
           resolve: {
-            allorders: function(Chats) {
-              return Chats.all(); }
+            allorders: function(Orders) {
+              return Orders.all(); }
           }
         }
       }
@@ -92,6 +92,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
+
   $urlRouterProvider.otherwise('/login');
 
 });

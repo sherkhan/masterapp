@@ -1,8 +1,9 @@
 <ion-view view-title="задачи">
     <ion-content>
+        <ion-refresher pulling-text="Updating data" on-refresh="refresh()"></ion-refresher>
         <ion-list>
             <ion-item class="item-remove-animate item-icon-right" ng-repeat="order in orders" type="item-text-wrap"
-                      href="#/tab/chats/{{chat.id}}">
+                      href="#/tab/orders/{{order.id}}">
 
                 <h2>{{order.name}}</h2>
 

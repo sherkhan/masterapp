@@ -23,7 +23,7 @@ angular.module('starter.controllers', [])
     })
 
     .controller('OrderDetailCtrl', function ($scope, $stateParams, Orders, allorders) {
-        $scope.orders = allorders.get($stateParams.orderId);
+        //$scope.orders = allorders.get($stateParams.orderId);
     })
 
     .controller('AccountCtrl', function ($scope) {

@@ -72,7 +72,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-orders': {
           templateUrl: 'templates/order-detail.html',
-          controller: 'OrdersCtrl',
+          controller: 'OrderDetailCtrl',
           resolve: {
             allorders: function(Orders) {
               return Orders.all(); }

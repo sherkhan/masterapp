@@ -7,6 +7,7 @@ angular.module('starter.services', [])
             all: function(){
                 var dfd = $q.defer();
                 $http.get("./data/anton.json").then(function(response){
+                //$http.get("http://scw.by/data/anton.json").then(function(response){
                     orders = response.data;
 
                     dfd.resolve(orders);
